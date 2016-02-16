@@ -1,0 +1,53 @@
+<nav class="navbar navbar-default navbar-fixed-top" role="">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#">
+      <img alt="Brand" style="margin-top: -32px;" src="assets/images/sopra-logo.png">
+    </a>
+  </div>
+
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+    <ul class="nav navbar-nav">
+      <li ui-sref-active="active">
+        <a ui-sref="main.home"><i class="fa fa-home"></i> Accueil</a>
+      </li>
+      <li ui-sref-active="active" class="dropdown" dropdown>
+        <a href="#" class="dropdown-toggle" dropdown-toggle data-toggle="dropdown" role="button" aria-expanded="false">Saisie <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a ui-sref="main.param">Sous menu 1</a></li>
+          <li><a ui-sref="main.paramalerte">Sous menu 2</a></li>
+          <li><a ui-sref="main.tableref">Sous menu 3</a></li>
+        </ul>
+      </li>
+      <li ui-sref-active="active" class="dropdown" dropdown>
+        <a href="#" class="dropdown-toggle" dropdown-toggle data-toggle="dropdown" role="button" aria-expanded="false">Consultation <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a ui-sref="main.carte">Cartes</a></li>
+          <li><a ui-sref="main.paramalerte">Sous menu 2</a></li>
+        </ul>
+      </li>
+      <li ui-sref-active="active" class="dropdown" dropdown>
+        <a href="#" class="dropdown-toggle" dropdown-toggle data-toggle="dropdown" role="button" aria-expanded="false">Edition <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a ui-sref="main.param">Sous menu 1</a></li>
+        </ul>
+      </li>
+      <li ui-sref-active="active" class="dropdown" dropdown>
+          <a href="#" class="dropdown-toggle" dropdown-toggle data-toggle="dropdown" role="button" aria-expanded="false">Administration <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a ui-sref="main.param">Sous menu 1</a></li>
+          <li><a ui-sref="main.paramalerte">Sous menu 2</a></li>
+          <li><a ui-sref="main.tableref">Sous menu 3</a></li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right" style="margin-right: 20px;">
+      <li><a href="#"><i class="fa fa-user"></i> admin</a></li>
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,129 @@
+<div class="container">
+  <form class="form-horizontal" name="marcheForm">
+    <div class="col-md-12">
+      <div class="well bs-component">
+        <fieldset>
+          <legend>Détail carte</legend>
+          <div class="col-md-7">
+            <div class="form-group">
+              <label class="col-sm-2 control-label">Numéro carte</label>
+              <label class="input col-sm-4"
+                     ng-class="{'state-error': marcheForm.dateDebut.$dirty && marcheForm.dateDebut.$invalid}">
+                <input type="text" name="numCarteIso" class="form-control" required
+                       ng-model="editCarte.carte.numCarteIso"/>
+
+                <div class="note note-error" ng-if="marcheForm.dateDebut.$dirty" ng-messages="marcheForm.dateDebut.$error">
+                  <div ng-message="required">Date de début obligatoire</div>
+                </div>
+              </label>
+              <label class="col-sm-2 control-label">Date Traitement</label>
+              <label class="input col-sm-4">
+                <input type="text" name="dateTraitement" class="form-control" required
+                       ng-model="editCarte.carte.dateTraitement"/>
+              </label>
+              <label class="col-sm-2 control-label">Date Fin validité</label>
+              <label class="input col-sm-4">
+                <input type="text" name="dateFinValidite" class="form-control" required
+                       ng-model="editCarte.carte.dateFinValidite"/>
+              </label>
+              <label class="col-sm-2 control-label">Date Saisie</label>
+              <label class="input col-sm-4">
+                <input type="text" name="dateReseauSaisie" class="form-control" required
+                       ng-model="editCarte.carte.dateReseauSaisie"/>
+              </label>
+              <label class="col-sm-2 control-label">Date Capture</label>
+              <label class="input col-sm-4">
+                <input type="text" name="dateCapture" class="form-control" required
+                       ng-model="editCarte.carte.dateCapture"/>
+              </label>
+              <label class="col-sm-2 control-label">Réseau</label>
+              <label class="input col-sm-4">
+                <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions2" checked id="inlineRadio3" value="option1"> CB
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions2" id="inlineRadio4" value="option2"> VISA
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions2" id="inlineRadio5" value="option2"> MASTERCARD
+                </label>
+              </label>
+              </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">Nom porteur</label>
+              <label class="input col-sm-4">
+                <input type="text" name="nomPorteur" class="form-control" required
+                       ng-model="editCarte.carte.nomPorteur"/>
+              </label>
+              </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">Type capture</label>
+              <label class="input col-sm-4">
+                <input type="text" name="typeCapture" class="form-control" required
+                       ng-model="editCarte.carte.typeCapture"/>
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" checked id="inlineRadio1" value="option1"> Prime
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Commission
+              </label>
+              </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">Remettant</label>
+              <label class="input col-sm-4">
+                <input type="text" name="remettant" class="form-control" required
+                       ng-model="editCarte.carte.remettant"/>
+              </label>
+              </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">Numéro remise</label>
+              <label class="input col-sm-4">
+                <input type="text" name="numeroRemise" class="form-control" required
+                       ng-model="editCarte.carte.numeroRemise"/>
+              </label>
+              <label class="col-sm-2 control-label">Numéro ss remise</label>
+              <label class="input col-sm-4">
+                <input type="text" name="numeroSsRemise" class="form-control" required
+                       ng-model="editCarte.carte.numeroSsRemise"/>
+              </label>
+              </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">Destinataire</label>
+              <label class="input col-sm-4">
+                <input type="text" name="destinataire" class="form-control" required
+                       ng-model="editCarte.carte.destinataire"/>
+              </label>
+              </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">Numéro bordereau</label>
+              <label class="input col-sm-4">
+                <input type="text" name="numBordereau" class="form-control" required
+                       ng-model="editCarte.carte.numBordereau"/>
+              </label>
+              </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Commentaire</label>
+              <label class="input col-sm-8">
+                <textarea type="text" name="commentaire" class="form-control" required
+                       ng-model="editCarte.carte.commentaire"/>
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </form>
+  <div class="col-md-12">
+    <div class="well bs-component">
+      <fieldset>
+        <legend>Actions</legend>
+        <div class="form-group">
+          <div class="col-sm-10">
+            <button type="button" ui-sref="main.carte" class="btn btn-success">Info Commercant</button>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,61 @@
+<div st-table="displayedCollection" st-safe-src="cartes.carteslist" >
+  <form class="form-horizontal">
+    <div class="col-md-12">
+      <div class="well bs-component">
+        <fieldset>
+          <legend>Filtre de recherches</legend>
+          <div class="form-group">
+            <label for="numIso" class="col-sm-2 control-label">Numéro carte ISO</label>
+            <div class="col-sm-2">
+              <input type="text" id="numIso" class="form-control" ga-search="numIso">
+            </div>
+            <label for="numAlpha" class="col-sm-2 control-label">Numéro carte ALPHA</label>
+            <div class="col-sm-2">
+              <input type="text" id="numAlpha" class="form-control" ga-search="numAlpha">
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </form>
+  <div class="col-md-12">
+    <div class="well bs-component">
+      <fieldset>
+        <legend>Liste</legend>
+        <table class="table table-striped table-wrap table-bdf">
+          <thead>
+          <tr>
+            <th st-sort="numCarteIso">Numéro carte</th>
+            <th st-sort="dateFinValidite">Date fin validité</th>
+            <th st-sort="dateTraitement">Date réseau saisie</th>
+            <th st-sort="dateReseauSaisie">Date traitement</th>
+            <th st-sort="remettant">Remettant</th>
+            <th>Voir</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr ng-repeat="carte in displayedCollection track by $index">
+            <td>{{carte.numCarteIso}}</td>
+            <td>{{carte.dateFinValidite}}</td>
+            <td>{{carte.dateTraitement}}</td>
+            <td>{{carte.dateReseauSaisie}}</td>
+            <td>{{carte.remettant}}</td>
+            <td>
+              <button class="btn btn-warning btn-xs" ui-sref="main.carte.edit({id: carte.id})">
+                <i class="fa fa-search"></i> Voir
+              </button>
+            </td>
+          </tr>
+          </tbody>
+          <tfoot>
+          <tr>
+             	<td colspan="11">
+             	<div st-pagination="" st-items-by-page="12"  st-displayed-pages="5"></div>
+             	</td>
+             	</tr>
+          </tfoot>
+        </table>
+      </fieldset>
+    </div>
+  </div>
+</div>
